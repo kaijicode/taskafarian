@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  postgresql:
+    image: postgres:13.0
+    ports:
+      - 5555:5432
+    environment:
+      - POSTGRES_USER=taskafarian
+      - POSTGRES_PASSWORD=taskafarian
+    volumes:
+      - ./chalicelib/sql/create-role.sql:/docker-entrypoint-initdb.d/001-create-role.sql
+      - ./chalicelib/sql/schema.sql:/docker-entrypoint-initdb.d/002-schema.sql
+      - ./tests/fixtures/base.sql:/docker-entrypoint-initdb.d/003-base.sql

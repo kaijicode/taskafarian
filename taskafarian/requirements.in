@@ -1,0 +1,6 @@
+chalice
+psycopg2-binary
+marshmallow
+pyjwt
+bcrypt
+attrs==19.3.0

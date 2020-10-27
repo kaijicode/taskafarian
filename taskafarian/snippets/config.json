@@ -1,0 +1,55 @@
+{
+  "version": "2.0",
+  "app_name": "taskafarian",
+  "stages": {
+    "local": {
+      "environment_variables": {
+        "TASKAFARIAN_DB_HOST": "localhost",
+        "TASKAFARIAN_DB_NAME": "taskafarian",
+        "TASKAFARIAN_DB_USER": "taskafarian",
+        "TASKAFARIAN_DB_PORT": "5555",
+        "TASKAFARIAN_DB_PASSWORD": "taskafarian",
+        "TASKAFARIAN_ENABLE_LOG_TO_FILE": "False",
+        "TASKAFARIAN_SECRET_KEY": "secret",
+        "TASKAFARIAN_ALLOWED_ORIGIN": "*",
+        "TASKAFARIAN_DEBUG": "True",
+        "TASKAFARIAN_ENV": "local"
+      }
+    },
+    "test": {
+      "environment_variables": {
+        "TASKAFARIAN_DB_HOST": "localhost",
+        "TASKAFARIAN_DB_NAME": "test_taskafarian",
+        "TASKAFARIAN_DB_USER": "test_taskafarian",
+        "TASKAFARIAN_DB_PORT": "5555",
+        "TASKAFARIAN_DB_PASSWORD": "test_taskafarian",
+        "TASKAFARIAN_ENABLE_LOG_TO_FILE": "False",
+        "TASKAFARIAN_SECRET_KEY": "83e3ae0b97d05e2b41d0362c57ae15f3",
+        "TASKAFARIAN_ALLOWED_ORIGIN": "*",
+        "TASKAFARIAN_DEBUG": "True",
+        "TASKAFARIAN_ENV": "test"
+      }
+    },
+    "dev": {
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "TASKAFARIAN_DB_HOST": "",
+        "TASKAFARIAN_DB_NAME": "",
+        "TASKAFARIAN_DB_USER": "",
+        "TASKAFARIAN_DB_PORT": "5432",
+        "TASKAFARIAN_DB_PASSWORD": "",
+        "TASKAFARIAN_ENABLE_LOG_TO_FILE": "False",
+        "TASKAFARIAN_SECRET_KEY": "",
+        "TASKAFARIAN_ALLOWED_ORIGIN": "",
+        "TASKAFARIAN_DEBUG": "",
+        "TASKAFARIAN_ENV": "dev"
+      },
+      "subnet_ids": [
+        "subnet-x"
+      ],
+      "security_group_ids": [
+        "sg-x"
+      ]
+    }
+  }
+}
